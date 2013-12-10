@@ -128,3 +128,5 @@ UpgradeLog*.XML
 *.cs
 *.config
 *.zip
+
+.idea
