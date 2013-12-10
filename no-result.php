@@ -28,7 +28,6 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 ?>
-
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
         <h1><?php _e( "Not Found", "default" ); ?></h1>

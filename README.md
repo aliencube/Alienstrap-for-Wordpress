@@ -1,16 +1,17 @@
 # Alienstrap for Wordpress
 
-**Alienstrap for Wordpress (Alienstrap)** is a Wordpress theme based on [Twitter Bootstrap 3](http://getbootstrap.com).
+**Alienstrap for Wordpress (Alienstrap)** is a [Wordpress](http://wordpress.org) theme based on [Twitter Bootstrap 3](http://getbootstrap.com).
 
 
-# Requirements #
+# Requirements/Dependencies #
 
-In order to apply **Alienstrap**, those following applications and plugins are required to install.
+In order to apply **Alienstrap** to your website, those following applications, plugins and modules are required to install.
 
 * [Wordpress](http://wordpress.org) 3.7.1 or later.
 * [Options Framework](http://wordpress.org/plugins/options-framework) 1.7.1 or later.
+* [Aqua Resizer](https://github.com/syamilmj/Aqua-Resizer)
 
-_*NOTE*_: Previous versions of Wordpress and Options Framework have not been tested. You can use earlier version of those with your own risk.
+_*NOTE*_: Previous versions of Wordpress, Options Framework and Aqua Resizer have not been tested. You can use earlier version of those with your own risk.
 
 
 # License #

@@ -109,7 +109,7 @@ if ( ! function_exists( "as_get_pagination" ) )
 
 
 /**
- * Register widgetized area and update sidebar with default widgets
+ * Registers widgetised footer.
  */
 if ( ! function_exists( "as_init_widgets" ) )
 {

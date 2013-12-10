@@ -28,7 +28,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 ?>
-
+    <!-- Footer -->
     <div class="container">
         <div class="row">
 
