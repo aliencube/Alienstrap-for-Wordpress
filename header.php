@@ -33,7 +33,7 @@
 <head>
     <meta charset="<?php bloginfo( "charset" ); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-    <title><?php wp_title( "|", true, "right" ); ?></title>
+    <title><?php wp_title( "|", true, "right" ); ?> <?php bloginfo( "name" ); ?></title>
     <meta name="description" content="<?php bloginfo( "description" ); ?>" />
     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1" />
 
