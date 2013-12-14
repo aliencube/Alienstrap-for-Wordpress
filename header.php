@@ -40,16 +40,16 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( "pingback_url" ); ?>" />
 
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/bootstrap/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/main.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/style.css?v=<?php echo get_last_modified_date("/css/style.css"); ?>" />
 
-    <script src="scripts/modernizr-2.6.2.min.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/scripts/modernizr-2.6.2.min.js"></script>
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="<?php echo is_admin_bar_showing() ? "admin-bar" : ""; ?>">
     <!--[if lt IE 9]>
     <div class="container">
         <div class="row">
@@ -61,9 +61,10 @@
     <![endif]-->
 
     <div class="container">
-        <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -79,8 +80,8 @@
                 </a>
             </div>
 
-            <nav id="bs-navbar-collapse" class="collapse navbar-collapse" role="navigation">
-                <?php wp_nav_menu( array( "container" => false, "menu_class" => "nav navbar-nav navbar-right" ) ); ?>
-            </nav>
-        </header>
+            <div id="bs-navbar-collapse" class="collapse navbar-collapse navbar-right">
+                <?php wp_nav_menu( array( "container" => false, "menu_class" => "nav navbar-nav" ) ); ?>
+            </div>
+        </nav>
     </div>

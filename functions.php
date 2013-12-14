@@ -31,14 +31,26 @@
 /**
  * Imports image resizer.
  */
-require get_template_directory() . "/libraries/aq_resizer.php";
+require_once get_template_directory() . "/libraries/aq_resizer.php";
+
+/**
+ * Gets the last modified date for JavaScript or CSS.
+ */
+if ( ! function_exists( "get_last_modified_date" ) )
+{
+    function get_last_modified_date( $filepath )
+    {
+        $filepath = get_template_directory() . $filepath;
+        return date ( "YmdHis", filemtime( $filepath ) );
+    }
+}
 
 /**
  * Gets the pagination.
  */
 if ( ! function_exists( "as_get_pagination" ) )
 {
-    function as_get_pagination($pages = "", $range = 2)
+    function as_get_pagination( $pages = "", $range = 2 )
     {
         $showitems = ( $range * 2 ) + 1;
 
@@ -126,5 +138,3 @@ if ( ! function_exists( "as_init_widgets" ) )
 }
 
 add_action( "widgets_init", "as_init_widgets" );
-
-?>

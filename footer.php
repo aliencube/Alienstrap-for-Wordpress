@@ -37,24 +37,24 @@
         </div>
     </div>
 
-    <!-- Copyright -- >
+    <!-- Copyright -->
     <div class="container">
         <div class="row">
             <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                 <p>
-                    Copyright &copy; 2013-<?php date( "Y" ) == 2013 ? "" : date( "Y" ); ?>
-                    <a href="<?php bloginfo( "url" ); ?>" title="<?php bloginfo( "name" ); ?>"><?php bloginfo( "name" ); ?></a>.<br />
-                    <?php fflink(); ?> | Theme by <a href="https://github.com/aliencube/Alienstrap-for-Wordpress" ><?php echo wp_get_theme(); ?></a><br />
-                    <a href="http://opensource.org/licenses/MIT" title="The MIT License">The MIT License</a>
+                    Copyright &copy; 2013 &ndash; <?php date( "Y" ) == 2013 ? "" : date( "Y" ); ?>
+                    <a href="<?php bloginfo( "url" ); ?>" title="<?php bloginfo( "name" ); ?>"><?php bloginfo( "name" ); ?></a>
+                    | Theme by <a href="https://github.com/aliencube/Alienstrap-for-Wordpress" ><?php echo wp_get_theme(); ?></a>
+                    | <a href="http://opensource.org/licenses/MIT" title="The MIT License">The MIT License</a>
                 </p>
             </footer>
         </div>
     </div>
 
-    <script type="text/javascript" src="scripts/jquery/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="scripts/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="scripts/plugins.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/scripts/jquery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/scripts/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/scripts/plugins.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/scripts/main.js?v=<?php echo get_last_modified_date("/scripts/main.js"); ?>"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script type="text/javascript">

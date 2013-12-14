@@ -1,0 +1,15 @@
+body {
+    margin-top: 70px !important;
+}
+
+.admin-bar .navbar-fixed-top {
+    top: 28px;
+}
+
+.navbar-right {
+    padding-right: 20px !important;
+}
+
+.navbar-nav li {
+    padding-top: 10px !important;
+}
