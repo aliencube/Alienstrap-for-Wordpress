@@ -138,3 +138,15 @@ if ( ! function_exists( "as_init_widgets" ) )
 }
 
 add_action( "widgets_init", "as_init_widgets" );
+
+/**
+ * Redefines the read more link.
+ */
+if ( ! function_exists( "new_excerpt_more" ) )
+{
+    function new_excerpt_more( $more ) {
+        return " <span>[<a class=\"read-more\" href=\"" . get_permalink( get_the_ID() ) . "\">...</a>]</span>";
+    }
+}
+
+add_filter( "excerpt_more", "new_excerpt_more" );
