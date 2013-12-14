@@ -2,7 +2,7 @@
 /**
  * Alienstrap for Wordpress
  *
- * @file        content.php
+ * @file        content-page.php
  * @author      Justin Yoo <justin.yoo@aliencube.com>
  * @repository  https://github.com/aliencube/Alienstrap-for-Wordpress
  *
@@ -29,23 +29,32 @@
  */
 ?>
 <!-- Post panel -->
-<article id="post-<?php the_ID(); ?>" <?php post_class("col-xs-12 col-sm-6 col-md-4 col-sm-4"); ?>>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<article id="post-<?php the_ID(); ?>" <?php post_class( "col-xs-12 col-sm-12 col-md-12 col-lg-12" ); ?>>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header entry-title">
+                <h1><?php the_title(); ?></h1>
+            </div>
         </div>
-        <div class="panel-body">
-            <?php
-                $thumbnail = get_post_thumbnail_id();
-                //  Gets the full size image URL.
-                $img_full_url = wp_get_attachment_url( $thumbnail, "full" );
-                //  Gets the resized image URL.
-                $image_url = aq_resize( $img_url, 720, 560, true );
-            ?>
-            <?php if( $image_url ) : ?>
-                <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image_url ?>" /></a>
-            <?php endif; ?>
-            <div><?php the_excerpt(); ?></div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="entry-meta">
+                <p class="text-right">
+                    <?php echo as_get_posted_date_and_author(); ?> |
+                    <a href="<?php echo get_permalink(); ?>"><span class="glyphicon glyphicon-link"></span></a>
+                    <?php edit_post_link( "<span class=\"glyphicon glyphicon-edit\"></span>", "", "" ); ?>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="entry-content">
+
+                <?php the_content(); ?>
+
+            </div>
         </div>
     </div>
 </article>

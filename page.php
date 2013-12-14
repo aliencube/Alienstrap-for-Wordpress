@@ -2,7 +2,7 @@
 /**
  * Alienstrap for Wordpress
  *
- * @file        content.php
+ * @file        page.php
  * @author      Justin Yoo <justin.yoo@aliencube.com>
  * @repository  https://github.com/aliencube/Alienstrap-for-Wordpress
  *
@@ -28,24 +28,32 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 ?>
-<!-- Post panel -->
-<article id="post-<?php the_ID(); ?>" <?php post_class("col-xs-12 col-sm-6 col-md-4 col-sm-4"); ?>>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<?php get_header(); ?>
+
+<div class="container">
+
+    <?php while ( have_posts() ) : the_post(); ?>
+
+        <div class="row">
+
+            <?php get_template_part( "content", "page" ); ?>
+
         </div>
-        <div class="panel-body">
-            <?php
-                $thumbnail = get_post_thumbnail_id();
-                //  Gets the full size image URL.
-                $img_full_url = wp_get_attachment_url( $thumbnail, "full" );
-                //  Gets the resized image URL.
-                $image_url = aq_resize( $img_url, 720, 560, true );
-            ?>
-            <?php if( $image_url ) : ?>
-                <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image_url ?>" /></a>
-            <?php endif; ?>
-            <div><?php the_excerpt(); ?></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <?php
+                // If comments are open or we have at least one comment, load up the comment template
+                if ( comments_open() || get_comments_number() != "0" )
+                {
+                    comments_template();
+                }
+                ?>
+            </div>
         </div>
-    </div>
-</article>
+
+    <?php endwhile; ?>
+
+</div>
+
+<?php get_footer(); ?>

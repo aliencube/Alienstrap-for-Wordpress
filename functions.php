@@ -46,6 +46,19 @@ if ( ! function_exists( "get_last_modified_date" ) )
 }
 
 /**
+ * Gets the date posted and the author of the post.
+ */
+if ( ! function_exists( "as_get_posted_date_and_author" ) )
+{
+    function as_get_posted_date_and_author()
+    {
+        $posted_on = "Posted on <span>" . get_the_date() . " " . get_the_time() . "</span>";
+        $posted_by = "by <span><a href=\"" . get_author_posts_url( get_the_author_meta( "ID" ) ) . "\">" . get_the_author() . "</a></span>";
+        return $posted_on . " " . $posted_by;
+    }
+}
+
+/**
  * Gets the pagination.
  */
 if ( ! function_exists( "as_get_pagination" ) )
@@ -142,11 +155,11 @@ add_action( "widgets_init", "as_init_widgets" );
 /**
  * Redefines the read more link.
  */
-if ( ! function_exists( "new_excerpt_more" ) )
+if ( ! function_exists( "as_excerpt_more" ) )
 {
-    function new_excerpt_more( $more ) {
+    function as_excerpt_more( $more ) {
         return " <span>[<a class=\"read-more\" href=\"" . get_permalink( get_the_ID() ) . "\">...</a>]</span>";
     }
 }
 
-add_filter( "excerpt_more", "new_excerpt_more" );
+add_filter( "excerpt_more", "as_excerpt_more" );

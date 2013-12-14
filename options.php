@@ -73,6 +73,11 @@ function optionsframework_options() {
 		'styles' => array( 'normal' => 'Normal','bold' => 'Bold' ),
 		'color' => false
 	);
+    
+    $fonts_array = array(
+        "Nanum Gothic"  => "Nanum Gothic",
+        "Nanum Myeonjo"  => "Nanum Myeonjo"
+    );
 
 	// Pull all the categories into an array
 	$options_categories = array();

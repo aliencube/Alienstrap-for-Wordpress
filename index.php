@@ -38,13 +38,17 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="jumbotron">
 
-                    <?php if ( of_get_option( "as_hero_title" ) != "" ) { ?>
-                        <h1><?php echo of_get_option( "as_hero_title" ) ?></h1>
-                    <?php } ?>
+                    <?php if ( of_get_option( "as_hero_title" ) != "" ) : ?>
 
-                    <?php if ( of_get_option( "as_hero_text" ) != "" ) { ?>
-                        <p><?php echo of_get_option( "as_hero_text" ) ?></p>
-                    <?php } ?>
+                        <h1 class="text-center smaller"><?php echo of_get_option( "as_hero_title" ) ?></h1>
+
+                    <?php endif; ?>
+
+                    <?php if ( of_get_option( "as_hero_text" ) != "" ) : ?>
+
+                        <p class="text-center smaller"><?php echo of_get_option( "as_hero_text" ) ?></p>
+
+                    <?php endif; ?>
 
                 </div>
             </div>

@@ -27,12 +27,44 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 body {
     margin-top: 70px !important;
+    font-family: "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .admin-bar .navbar-fixed-top {
     top: 28px;
+}
+
+.jumbotron h1.smaller {
+    font-size: 48px;
+}
+
+.jumbotron p.smaller {
+    font-size: 85%;
+}
+
+.nav-border {
+    padding: 10px 0px !important;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .navbar-right {
@@ -41,4 +73,17 @@ body {
 
 .navbar-nav li {
     padding-top: 10px !important;
+}
+
+.padding-left-narrow {
+    padding-left: 5px;
+}
+
+article .panel-title > a {
+    color: #428bca;
+    font-weight: bold;
+}
+
+article .panel-body {
+    overflow-x: hidden;
 }
