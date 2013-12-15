@@ -142,7 +142,7 @@ if ( ! function_exists( "as_init_widgets" ) )
     {
         register_sidebar( array(
             "name"          => "Footer",
-            "before_widget" => "<div class=\"col-xs-12 col-sm-6 col-md-3 col-lg-3 %2$s\">",
+            "before_widget" => "<div class=\"col-xs-12 col-sm-6 col-md-3 col-lg-3 widget\">",
             "after_widget"  => "</div>",
             "before_title"  => "<h3>",
             "after_title"   => "</h3>"

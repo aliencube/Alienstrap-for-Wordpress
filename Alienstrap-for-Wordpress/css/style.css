@@ -87,3 +87,11 @@ article .panel-title > a {
 article .panel-body {
     overflow-x: hidden;
 }
+
+#footer .widget ul {
+    padding-left: 15px;
+}
+
+#footer .widget ul li {
+    /*list-style-type: none;*/
+}

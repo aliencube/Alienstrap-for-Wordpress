@@ -29,7 +29,7 @@
  */
 ?>
     <!-- Footer -->
-    <div class="container">
+    <div id="footer" class="container">
         <div class="row">
 
             <?php dynamic_sidebar("Footer"); ?>
@@ -56,6 +56,8 @@
     <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/scripts/plugins.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/scripts/main.js?v=<?php echo get_last_modified_date("/scripts/main.js"); ?>"></script>
 
+    <?php wp_footer(); ?>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script type="text/javascript">
         (function (b, o, i, l, e, r) {
@@ -67,7 +69,5 @@
         }(window, document, 'script', 'ga'));
         ga('create', 'UA-XXXXX-X'); ga('send', 'pageview');
     </script>
-
-    <?php wp_footer(); ?>
 </body>
 </html>
