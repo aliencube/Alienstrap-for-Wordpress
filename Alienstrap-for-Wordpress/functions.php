@@ -96,13 +96,13 @@ if ( ! function_exists( "as_get_pagination" ) )
             //  Gets the first page.
             if ( $paged > 2 && $paged > $range + 1 && $showitems < $pages )
             {
-                echo "<li><a href=\"" . get_pagenum_link( 1 ) . "\">&laquo;</a></li>\n";
+                echo "<li><a href=\"" . get_pagenum_link( 1 ) . "\"><span class=\"glyphicon glyphicon-fast-backward\"></span></a></li>\n";
             }
 
             //  Gets the previous page.
             if ( $paged > 1 && $showitems < $pages )
             {
-                echo "<li><a href=\"" . get_pagenum_link( $paged - 1 ) . "\">&lsaquo;</a></li>\n";
+                echo "<li><a href=\"" . get_pagenum_link( $paged - 1 ) . "\"><span class=\"glyphicon glyphicon-chevron-left\"></span></a></li>\n";
             }
 
             //  Gets the pages.
@@ -119,13 +119,13 @@ if ( ! function_exists( "as_get_pagination" ) )
             //  Gets the next page.
             if ( $paged < $pages && $showitems < $pages )
             {
-                echo "<li><a href=\"" . get_pagenum_link( $paged + 1 ) . "\">&rsaquo;</a></li>\n";
+                echo "<li><a href=\"" . get_pagenum_link( $paged + 1 ) . "\"><span class=\"glyphicon glyphicon-chevron-right\"></span></a></li>\n";
             }
 
             //  Gets the last page.
             if ( $paged < $pages - 1 && $paged+$range - 1 < $pages && $showitems < $pages )
             {
-                echo "<li><a href=\"" . get_pagenum_link( $pages ) . "\">&raquo;</a></li>\n";
+                echo "<li><a href=\"" . get_pagenum_link( $pages ) . "\"><span class=\"glyphicon glyphicon-fast-forward\"></span></a></li>\n";
             }
         }
         echo "</ul>\n";
