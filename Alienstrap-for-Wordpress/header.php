@@ -80,8 +80,9 @@
                 </a>
             </div>
 
-            <div id="bs-navbar-collapse" class="collapse navbar-collapse navbar-right">
-                <?php wp_nav_menu( array( "container" => false, "menu_class" => "nav navbar-nav" ) ); ?>
+            <div id="bs-navbar-collapse" class="collapse navbar-collapse">
+                <?php echo get_search_form(); ?>
+                <?php wp_nav_menu( array( "container" => false, "menu_class" => "nav navbar-nav navbar-right" ) ); ?>
             </div>
         </nav>
     </div>

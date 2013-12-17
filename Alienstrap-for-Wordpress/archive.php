@@ -2,7 +2,7 @@
 /**
  * Alienstrap for Wordpress
  *
- * @file        functions.php
+ * @file        archive.php
  * @author      Justin Yoo <justin.yoo@aliencube.com>
  * @repository  https://github.com/aliencube/Alienstrap-for-Wordpress
  *
