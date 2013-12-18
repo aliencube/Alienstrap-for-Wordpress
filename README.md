@@ -9,9 +9,14 @@ In order to apply **Alienstrap** to your website, those following applications, 
 
 * [Wordpress](http://wordpress.org) 3.7.1 or later.
 * [Options Framework](http://wordpress.org/plugins/options-framework) 1.7.1 or later.
-* [Aqua Resizer](https://github.com/syamilmj/Aqua-Resizer)
+* [Aqua Resizer](https://github.com/syamilmj/Aqua-Resizer) 1.2.0 or later.
 
 _*NOTE*_: Previous versions of Wordpress, Options Framework and Aqua Resizer have not been tested. You can use earlier version of those with your own risk.
+
+
+# Contribution #
+
+Your contribution is always welcome! All your work should be done in the`dev` branch. Once you finish your work, please send us a pull request on `dev` for review.
 
 
 # License #
