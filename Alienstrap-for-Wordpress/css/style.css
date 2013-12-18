@@ -100,3 +100,25 @@ article .panel-body {
 #searchform #searchsubmit {
     display: none;
 }
+
+.nav-menu .sub-menu {
+    display: none;
+    z-index: 99999;
+}
+
+.nav-menu li:hover > .sub-menu {
+    position: absolute;
+    display: block;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    background-color: #222;
+}
+
+.nav-menu li:hover > .sub-menu > li {
+    list-style-type: none;
+}
+
+.nav-menu li:hover > .sub-menu > li a {
+    color: #999;
+    padding-right: 15px;
+}

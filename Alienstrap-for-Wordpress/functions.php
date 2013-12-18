@@ -132,6 +132,18 @@ if ( ! function_exists( "as_get_pagination" ) )
     }
 }
 
+/**
+ * Registers header nav menu.
+ */
+if ( ! function_exists( "register_my_menu" ) )
+{
+    function register_header_menu()
+    {
+        register_nav_menu( "header-menu", "Header Menu" );
+    }
+}
+
+add_action( "init", "register_header_menu" );
 
 /**
  * Registers widgetised footer.

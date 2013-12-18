@@ -92,7 +92,7 @@
 
             <div id="bs-navbar-collapse" class="collapse navbar-collapse">
                 <?php echo get_search_form(); ?>
-                <?php wp_nav_menu( array( "container" => false, "menu_class" => "nav navbar-nav navbar-right" ) ); ?>
+                <?php wp_nav_menu( array( "theme-location" => "header-menu", "container" => false, "menu_class" => "nav navbar-nav navbar-right nav-menu" ) ); ?>
             </div>
         </nav>
     </div>
