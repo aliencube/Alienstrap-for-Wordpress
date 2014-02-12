@@ -42,13 +42,13 @@
 
         <div class="row nav-border">
             <!-- Previous post(s) -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
 
                 <?php previous_post_link( "<span class=\"glyphicon glyphicon-chevron-left\"></span> %link" ); ?>
 
             </div>
             <!-- Next post(s) -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
 
                 <?php next_post_link( "%link <span class=\"glyphicon glyphicon-chevron-right\"></span>" ); ?>
 
