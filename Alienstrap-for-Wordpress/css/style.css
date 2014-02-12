@@ -49,6 +49,14 @@ h6,
     font-family: "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h1 { font-size: 40px; }
+h2 { font-size: 30px; }
+h3 { font-size: 20px; }
+h4 { font-size: 20px; }
+h5 { font-size: 20px; }
+h6 { font-size: 20px; }
+body { font-size: 20px; }
+
 .admin-bar .navbar-fixed-top {
     top: 28px;
 }
@@ -82,10 +90,23 @@ h6,
 article .panel-title > a {
     color: #428bca;
     font-weight: bold;
+	font-size: 20px;
+}
+
+article .panel-heading {
+	overflow: hidden;
 }
 
 article .panel-body {
     overflow-x: hidden;
+}
+
+article .entry-content p {
+	margin-bottom: 20px;
+}
+
+article .entry-content .footnotes p {
+	margin-bottom: 10px;
 }
 
 #footer .widget ul {
@@ -94,6 +115,11 @@ article .panel-body {
 
 #footer .widget ul li {
     /*list-style-type: none;*/
+	font-size: 14px;
+}
+
+footer p {
+	font-size: 14px;
 }
 
 #searchform label,
